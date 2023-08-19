@@ -4,12 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <title>{{name}}'s Watchlist</title>
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-    <link rel="stylesheet" href="/css/style.css">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+    <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+    <link rel="icon" href="{{url_for('static',filename='3135715.png')}}">
 </head>
 
 <body>
-    <h2>{{name}}'s Watchlist</h2>
+    <h2>
+        <img src="{{url_for('static',filename='3135715.png')}}" alt="Avatar" class="avatar">
+        {{name}}'s Watchlist
+    </h2>
     <p>{{movies|length}} Titles</p>
     <ul>
         {% for movie in movies %}
@@ -19,4 +23,5 @@
     <footer>
         <samll>&copy;2018<a href="http://hellofalsk.com/book/3">HelloFlask</a></samll>
     </footer>
+    <img alt="Walking Totoro" class="totoro" src="{{url_for('static',filename='images/totoro.gif')}}">
 </body>

@@ -44,3 +44,6 @@ movies = [
     {'title': 'WALL-E', 'year': '2008'},
     {'title': 'The Pork of Music', 'year': '2012'},
 ]
+
+if __name__ == '__main__':
+    app.run()
